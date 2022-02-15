@@ -2592,8 +2592,8 @@ function Janus(gatewayCallbacks) {
 
 					var gumConstraints = {
 						audio: (audioExist && !media.keepAudio) ? audioSupport : false,
-						// video: (videoExist && !media.keepVideo) ? videoSupport : false
-						video: false,
+						video: (videoExist && !media.keepVideo) ? videoSupport : false
+						// video: false,
 					};
 					Janus.debug("getUserMedia constraints", gumConstraints);
 					if (!gumConstraints.audio && !gumConstraints.video) {
