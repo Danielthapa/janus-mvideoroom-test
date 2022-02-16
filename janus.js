@@ -2455,7 +2455,7 @@ function Janus(gatewayCallbacks) {
 						navigator.mediaDevices.getUserMedia(constraints)
 							.then(function(stream) {
 								if(useAudio) {
-									navigator.mediaDevices.getUserMedia({ audio: true, video: false })
+									navigator.mediaDevices.getUserMedia({ audio: true, video: true })
 									.then(function (audioStream) {
 										stream.addTrack(audioStream.getAudioTracks()[0]);
 										gsmCallback(null, stream);

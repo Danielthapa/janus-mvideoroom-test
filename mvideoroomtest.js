@@ -692,7 +692,7 @@ function subscribeTo(sources) {
         // Find an empty slot in the UI for each new source
         if (!feedStreams[stream.id].slot) {
           var slot;
-          for (var i = 1; i < 6; i++) {
+          for (var i = 1; i < 20; i++) {
             if (!feeds[i]) {
               slot = i;
               feeds[slot] = stream.id;
@@ -790,7 +790,7 @@ function subscribeTo(sources) {
           // Find an empty slot in the UI for each new source
           if (!feedStreams[stream.id].slot) {
             var slot;
-            for (var i = 1; i < 6; i++) {
+            for (var i = 1; i < 20; i++) {
               if (!feeds[i]) {
                 slot = i;
                 feeds[slot] = stream.id;
@@ -919,6 +919,7 @@ function subscribeTo(sources) {
       // The subscriber stream is recvonly, we don't expect anything here
     },
     onremotetrack: function (track, mid, on) {
+      debugger;
       Janus.debug(
         "Remote track (mid=" + mid + ") " + (on ? "added" : "removed") + ":",
         track
