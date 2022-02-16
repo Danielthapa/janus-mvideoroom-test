@@ -919,7 +919,6 @@ function subscribeTo(sources) {
       // The subscriber stream is recvonly, we don't expect anything here
     },
     onremotetrack: function (track, mid, on) {
-      debugger;
       Janus.debug(
         "Remote track (mid=" + mid + ") " + (on ? "added" : "removed") + ":",
         track

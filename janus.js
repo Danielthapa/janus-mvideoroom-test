@@ -81,7 +81,7 @@ var defaultExtension = {
 					callback(null, event.data.sourceId);
 				}
 			} else if (event.data.type == 'janusGetScreenPending') {
-				console.log('clearing ', event.data.id);
+				
 				window.clearTimeout(event.data.id);
 			}
 		});
@@ -272,7 +272,7 @@ Janus.init = function(options) {
 						Janus.error = console.error.bind(console);
 						break;
 					default:
-						console.error("Unknown debugging option '" + d + "' (supported: 'trace', 'debug', 'vdebug', 'log', warn', 'error')");
+						
 						break;
 				}
 			}
@@ -289,7 +289,7 @@ Janus.init = function(options) {
 
 		// Helper method to enumerate devices
 		Janus.listDevices = function(callback, config) {
-			console.log('CONFIG', config);
+			
 			callback = (typeof callback == "function") ? callback : Janus.noop;
 			if (config == null) config = { audio: true, video: true };
 			if(Janus.isGetUserMediaAvailable()) {
@@ -1895,7 +1895,7 @@ function Janus(gatewayCallbacks) {
 						}
 					}
 					if(receiverStreams) {
-						console.log(receiverStreams);
+						
 						if(receiverStreams.readableStream && receiverStreams.writableStream) {
 							receiverStreams.readableStream
 								.pipeThrough(config.receiverTransforms[event.track.kind])
@@ -2025,7 +2025,7 @@ function Janus(gatewayCallbacks) {
 						}
 					}
 					if(senderStreams) {
-						console.log(senderStreams);
+						
 						if(senderStreams.readableStream && senderStreams.writableStream) {
 							senderStreams.readableStream
 								.pipeThrough(config.senderTransforms[sender.track.kind])
