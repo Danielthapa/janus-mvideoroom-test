@@ -553,7 +553,7 @@ function checkEnter(field, event) {
     ? event.which
     : event.charCode;
   if (theCode == 13) {
-    registerUsername();
+    // registerUsername();
     return false;
   } else {
     return true;
@@ -563,7 +563,7 @@ function checkEnter(field, event) {
 function registerUsername() {
   if ($("#username").length === 0) {
     // Create fields to register
-    $("#register").click(registerUsername);
+    // $("#register").click(registerUsername);
     $("#username").focus();
   } else {
     // Try a registration
