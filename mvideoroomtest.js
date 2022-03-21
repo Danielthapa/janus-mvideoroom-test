@@ -46,7 +46,8 @@ var server = null;
 if (window.location.protocol === "http:")
   server = "http://" + window.location.hostname + ":8088/janus";
 else server = "https://" + window.location.hostname + ":8089/janus";
-server = "https://mediaserver-mumbai-a.anydone.com/janus";
+// server = "https://mediaserver-mumbai-a.anydone.com/janus";
+server = "https://mediaserver.anydone.net/janus";
 
 var apisecret =
   "OGYzNDAwZDI1MzEzNDFiOTk1NzMyODRjY2Q1NDdmMWIuYzJkMjU3NzczNDA5NGVjMWFmOGQ5ZjljMzQwODEyYWM=.bce7ddace2bb5919d5e4c96692733931821859c976af02f90bb08d2322c4697f173fc3b2bec049c5c3b5ef286a9c9e41d86261254b619708e365e875a1edd9f1";
